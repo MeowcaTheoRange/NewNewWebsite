@@ -19,7 +19,7 @@ export default function Floaty({
         start ? styles.FloatyStart : ""
       } ${keepFloat ? styles.FloatyKeep : ""} ${
         sticky ? styles.FloatySticky : ""
-      }`}
+      } FL-collapse-on-a11y`}
     >
       {children}
     </div>

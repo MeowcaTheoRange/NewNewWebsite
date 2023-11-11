@@ -18,6 +18,50 @@ div.body {
   scroll-snap-type: y mandatory;
 }
 
+/* A11y */
+
+html.a11y div.body {
+  scroll-snap-type: unset;
+}
+
+html.a11y .hv {
+  opacity: 0.75 !important;
+}
+
+html.a11y .FL-collapse-on-a11y {
+  position: static !important;
+  text-align: start !important;
+  display: block !important;
+  margin: 2em 0 !important;
+  max-width: none !important;
+}
+
+html.a11y .FL-collapse-on-a11y {
+  position: static !important;
+  text-align: start !important;
+  display: block !important;
+  margin: 2em 0 !important;
+  max-width: none !important;
+}
+
+html.a11y .LFM-collapse-on-a11y {
+  grid-auto-flow: column !important;
+  grid-template-columns: 96px auto !important;
+}
+
+html.a11y .LFMA-collapse-on-a11y {
+  order: -1 !important;
+}
+
+html.a11y .PG-collapse-on-a11y {
+  min-height: 0 !important;
+  color: var(--color-a11y) !important;
+}
+
+html.a11y .color-collapse-on-a11y {
+  color: white !important;
+}
+
 /* Markup */
 
 .block > h1,
@@ -172,6 +216,12 @@ a.special:active::after {
 }
 
 @media only screen and (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-height: 800px) {
   :root {
     font-size: 16px;
   }

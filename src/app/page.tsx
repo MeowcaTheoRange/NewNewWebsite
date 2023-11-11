@@ -199,15 +199,27 @@ export default function Home() {
         }`}
         id="top"
       >
-        <h1>
+        <h1 aria-label="About M T R dot Link">
           ABTMTR
           <wbr />
           .LINK
         </h1>
+        <Time time={time} date={date} />
+        <Floaty top>
+          <input
+            id="accessibility"
+            type="checkbox"
+            onClick={function (x) {
+              (x.target as HTMLInputElement).checked
+                ? document.body.parentElement?.classList.add("a11y")
+                : document.body.parentElement?.classList.remove("a11y");
+            }}
+          />
+          <label htmlFor="accessibility">Accessibility</label>
+        </Floaty>
         <Floaty>
           <LastFM player={player} />
         </Floaty>
-        <Time time={time} date={date} />
         <Floaty start>
           <p className="hv">Scroll down for more!</p>
         </Floaty>
@@ -215,7 +227,11 @@ export default function Home() {
       <Page scroll={body.current} color={Color3.fromHex("FFFFFF")} id="hi">
         <h1>Welcome 👋</h1>
         <p>
-          I'm <b>MeowcaTheoRange</b> <small>(miau-kuh-thee~oh-ray~nj)</small>.
+          I'm <b>MeowcaTheoRange</b>{" "}
+          <small aria-label="Pronounced: meow, cuh, the, oh, range">
+            (miau-kuh-thee~oh-ray~nj)
+          </small>
+          .
           <br />
           I'm a web developer, Fediverse enthusiast, and compulsory Minnesotan.
         </p>
@@ -597,7 +613,7 @@ export default function Home() {
           .
         </p>
         <ProjectList projects={images} markdown />
-        <ProjectList projects={blog} markdown double />
+        <ProjectList projects={blog} markdown double tooLong />
       </Page>
       <Page
         scroll={body.current}
@@ -656,7 +672,7 @@ export default function Home() {
           <br />
           <small>Primary Negative</small>
         </ColourChip>
-        <p style={{ color: "#00BFFF" }}>
+        <p style={{ color: "#00c0FF" }} className="color-collapse-on-a11y">
           <b>Iszac Blue</b> is literally <strong>Rocco Orange</strong> but
           inverted. This colour is named after <strong>Iszac</strong>, an OC of
           mine that I came up with, for the setting of Ætherglow.
@@ -668,7 +684,7 @@ export default function Home() {
           If you were to use any of these colours to represnt me as a{" "}
           <strong>person</strong>, use this one.
         </p>
-        <p style={{ color: "#FF4000" }}>
+        <p style={{ color: "#FF4000" }} className="color-collapse-on-a11y">
           <b>Rocco Orange</b> is my favourite colour orange, but now more red.
           The name comes from my character <strong>Rocco</strong>, whose hair is
           this colour - though this colour has been applied to more characters
@@ -687,12 +703,12 @@ export default function Home() {
           <br />
           <small>Secondary Negative</small>
         </ColourChip>
-        <p style={{ color: "#8000FF" }}>
+        <p style={{ color: "#8000FF" }} className="color-collapse-on-a11y">
           <b>Grape Soda</b> represents my love for grape soda.
           <br />
           My favourite is Fanta Grape. :]
         </p>
-        <p style={{ color: "#80FF00" }}>
+        <p style={{ color: "#80FF00" }} className="color-collapse-on-a11y">
           <b>Avalonian Waste</b> is also literally <strong>Grape Soda</strong>{" "}
           but inverted. This represents some{" "}
           <a

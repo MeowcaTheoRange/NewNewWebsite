@@ -11,9 +11,9 @@ export default function LastFM({
       {player?.recenttracks.track[0]["@attr"]?.nowplaying === "true" ? (
         <p>Currently listening to</p>
       ) : (
-        <p className={styles.LastFMError}>Last listened to</p>
+        <p className="hv">Last listened to</p>
       )}
-      <div className={styles.LastFM}>
+      <div className={`${styles.LastFM} LFM-collapse-on-a11y`}>
         <div className={styles.LastFMMetadata}>
           <p className={styles.LastFMMetadataTitle}>
             {player?.recenttracks.track[0].name}
@@ -24,7 +24,7 @@ export default function LastFM({
           </p>
         </div>
         <img
-          className={styles.LastFMAlbumArt}
+          className={`${styles.LastFMAlbumArt} LFMA-collapse-on-a11y`}
           src={player?.recenttracks.track[0].image[2]["#text"]}
           alt=""
           width="96"
@@ -33,6 +33,6 @@ export default function LastFM({
       </div>
     </>
   ) : (
-    <p className={styles.LastFMError}>Hold on...</p>
+    <p className="hv">Hold on...</p>
   );
 }

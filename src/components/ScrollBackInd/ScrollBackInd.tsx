@@ -14,6 +14,7 @@ export default function ScrollBackInd<T>({
 }) {
   return (
     <button
+      aria-hidden="true"
       className={`${styles.ScrollBackInd} ${
         hide ? styles.ScrollBackIndHidden : ""
       }`}

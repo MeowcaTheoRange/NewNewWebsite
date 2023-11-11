@@ -16,10 +16,12 @@ export default function ProjectList({
   projects,
   markdown = false,
   double = false,
+  tooLong = false,
 }: {
   projects: Project[];
   markdown?: boolean;
   double?: boolean;
+  tooLong?: boolean;
 }) {
   const router = useRouter();
   return (
@@ -31,7 +33,7 @@ export default function ProjectList({
       {projects.map((project, i) => (
         <a
           key={i}
-          className={`${styles.ProjectListProject} notInline`}
+          className={`${styles.ProjectListProject} notInline color-collapse-on-a11y`}
           href={project.url}
           target="_blank"
         >
@@ -49,7 +51,10 @@ export default function ProjectList({
             <p className={styles.ProjectListProjectDescriptionTitle}>
               {project.name}
             </p>
-            <p className={styles.ProjectListProjectDescriptionDescription}>
+            <p
+              className={styles.ProjectListProjectDescriptionDescription}
+              aria-hidden={tooLong}
+            >
               {markdown ? (
                 <ReactMarkdown
                   remarkPlugins={[remarkBreaks]}

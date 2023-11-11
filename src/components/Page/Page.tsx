@@ -40,11 +40,12 @@ export default function Page({
       ref={pageobj}
       className={`${styles.Page} ${preview ? styles.PagePreview : ""} ${
         footer ? styles.PageFooter : ""
-      } ${floaty ? styles.PageSpace : ""} block`}
+      } ${floaty ? styles.PageSpace : ""} block PG-collapse-on-a11y`}
       style={
         {
           "--backgroundColor": "#" + color?.darken(75).toHex(),
           "--color": "#" + color?.toHex(),
+          "--color-a11y": "#" + color?.lighten(75).toHex(),
           background: bg,
           backgroundColor: "#" + color?.darken(90).toHex(),
           color: "var(--color)",
