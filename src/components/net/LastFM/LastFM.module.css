@@ -1,0 +1,55 @@
+.LastFM {
+  display: inline-grid;
+  grid-template-columns: auto 96px;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid transparent;
+  /* background: linear-gradient(
+        0deg,
+        var(--backgroundColor) 0%,
+        var(--backgroundColor) 100%
+      )
+      padding-box,
+    conic-gradient(
+        from -90deg at 50% 50%,
+        transparent 0%,
+        transparent 35%,
+        currentColor 40%,
+        currentColor 45%,
+        transparent 50%,
+        transparent 85%,
+        currentColor 90%,
+        currentColor 95%,
+        transparent 100%
+      )
+      border-box; */
+  /* box-shadow: 0 0 4px currentColor; */
+  box-sizing: border-box;
+  /* padding: 16px; */
+}
+
+.LastFM .LastFMAlbumArt {
+  border-radius: 8px;
+}
+
+.LastFM .LastFMMetadata {
+}
+
+.LastFM .LastFMMetadata .LastFMMetadataTitle {
+  font-size: 1.5em;
+}
+
+.LastFMError {
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 875px) {
+  .LastFM {
+    grid-auto-flow: column;
+    grid-template-columns: 96px auto;
+  }
+
+  .LastFM .LastFMAlbumArt {
+    order: -1;
+  }
+}

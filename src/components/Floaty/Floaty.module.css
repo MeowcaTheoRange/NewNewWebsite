@@ -1,0 +1,55 @@
+.Floaty {
+  display: inline-block;
+  max-width: calc(50vw - 64px);
+  min-width: 373px;
+  /* height: calc(50vh - 64px); */
+  position: absolute !important;
+  right: 64px;
+  bottom: 64px;
+  text-align: end;
+  /* background-color: #0001;
+  box-shadow: 0 0 8px currentColor;
+  padding: 16px; */
+  box-sizing: border-box;
+}
+
+.FloatySticky {
+  position: sticky;
+}
+
+.Floaty:dir(rtl) {
+  right: unset;
+  left: 64px;
+}
+
+.FloatyTop {
+  bottom: unset;
+  top: 64px;
+}
+
+.FloatyStart {
+  right: unset;
+  left: 64px;
+  text-align: start;
+}
+
+.FloatyStart:dir(rtl) {
+  left: unset;
+  right: 64px;
+}
+
+@media only screen and (max-width: 875px) {
+  .Floaty {
+    position: static !important;
+    text-align: start;
+    display: block;
+    margin: 2em 0;
+    max-width: none;
+  }
+  .FloatyKeep {
+    position: absolute !important;
+    text-align: unset;
+    display: inline-block;
+    margin: 0;
+  }
+}

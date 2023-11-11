@@ -1,0 +1,11 @@
+.Eighty {
+  display: inline-block;
+  margin: 5px 6px;
+  transform-origin: center;
+}
+
+.Eighty img {
+  display: inline-block;
+  width: 88px;
+  height: 31px;
+}

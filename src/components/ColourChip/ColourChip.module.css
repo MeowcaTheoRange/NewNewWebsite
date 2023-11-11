@@ -1,0 +1,9 @@
+.ColourChip {
+  background-color: var(--mainColour);
+  display: inline-block;
+  width: 9em;
+  aspect-ratio: 1 / 1;
+  padding: 16px;
+  vertical-align: top;
+  margin: 1em;
+}

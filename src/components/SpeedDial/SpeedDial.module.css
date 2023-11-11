@@ -1,0 +1,18 @@
+.SpeedDial {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0 0.5em; */
+}
+
+.SpeedDialService {
+  /* display: inline-block; */
+}
+
+.SpeedDialServiceGolden {
+  font-weight: bolder;
+}
+
+.SpeedDialServicePurpose {
+  margin: 0;
+}

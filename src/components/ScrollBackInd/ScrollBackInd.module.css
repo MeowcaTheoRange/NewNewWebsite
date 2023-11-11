@@ -1,0 +1,65 @@
+.ScrollBackInd {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 16px;
+  left: 50vw;
+  transform: translateX(-50%);
+  bottom: 64px;
+  /* width: 64px; */
+  height: 64px;
+  z-index: 9;
+  background-color: #0008;
+  color: #fff;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: opacity 0.25s;
+}
+
+.ScrollBackInd span:first-child {
+  display: inline-block;
+  width: 32px;
+  border-radius: 8px;
+  font-size: 24px;
+  transition: text-shadow 0.25s;
+  font-family: "Material Symbols Outlined";
+}
+
+.ScrollBackInd:hover span:first-child {
+  text-shadow: 0 0 8px #fff;
+}
+
+.ScrollBackInd span {
+  font-size: 1rem;
+  padding: 0 8px;
+  font-family: var(--font-Lexend-Deca);
+}
+
+.ScrollBackInd img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: conic-gradient(
+      from -90deg at 50% 50%,
+      transparent 0%,
+      transparent 25%,
+      currentColor 30%,
+      currentColor 45%,
+      transparent 50%,
+      transparent 75%,
+      currentColor 80%,
+      currentColor 95%,
+      transparent 100%
+    )
+    border-box;
+}
+
+.ScrollBackIndHidden {
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,178 @@
+:root {
+  font-family: var(--font-Lexend-Deca);
+  font-size: 20px;
+}
+
+body,
+html {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div.body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Markup */
+
+.block > h1,
+.block > h2,
+.block > h3,
+.block > h4 {
+  max-width: 85%;
+}
+.block > p,
+.block > ul,
+.block > ol {
+  max-width: 65%;
+}
+
+h1 {
+  font-family: var(--font-Renogare);
+  font-size: 3rem;
+  margin: 0 0;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: var(--font-Renogare);
+  font-size: 2rem;
+  margin: 1rem 0;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: var(--font-Renogare);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  margin-bottom: 0.5rem;
+  text-wrap: balance;
+  font-weight: normal;
+}
+
+h4 {
+  font-family: var(--font-Renogare);
+  font-size: 1rem;
+  margin: 1rem 0;
+  margin-bottom: 0.5rem;
+  text-wrap: balance;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.5rem;
+}
+
+ul,
+ol {
+  font-size: 1rem;
+  margin: 0.5rem 1em;
+  line-height: 1.5rem;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+b {
+  font-size: 1.25em;
+  line-height: 1em;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  color: currentColor;
+  transform: skew(0);
+  transform-origin: bottom left;
+  transition: all 0.125s;
+}
+
+a.special::after {
+  content: " >>>";
+  position: absolute;
+  display: inline-block;
+  font-weight: bold;
+  width: 1ch;
+  overflow: hidden;
+  transform: scaleX(0);
+  top: 0;
+  right: 0;
+  transition: all 0.125s;
+}
+
+a:hover {
+  text-decoration-color: transparent;
+  transform: skew(-15deg, 0);
+}
+
+a.special:hover {
+  letter-spacing: 0.25ch;
+  margin-right: 2ch;
+  font-weight: bold;
+  text-decoration-color: transparent;
+  transform: skew(-15deg, 0);
+}
+
+a.special:hover::after {
+  right: -2ch;
+  transform: scaleX(1);
+}
+
+a:active {
+  font-weight: bold;
+}
+
+a.special:active {
+  transform: skew(-30deg, 0);
+  letter-spacing: 0.5ch;
+  margin-right: 5ch;
+}
+
+a.special:active::after {
+  width: 4ch;
+  right: -5ch;
+}
+
+.icon {
+  font-family: "Material Symbols Outlined";
+  font-size: 24px;
+  line-height: 24px;
+}
+
+/* Stinky styling */
+
+.hv {
+  opacity: 0.5;
+}
+
+.chip {
+  display: inline-block;
+  background-color: var(--backgroundColor);
+  color: var(--color);
+  padding: 0 1em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  border-radius: 1em;
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,59 @@
+.Page {
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  /* overflow-y: auto; */
+  overflow: hidden;
+  padding: 64px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  background-attachment: fixed;
+  z-index: 1;
+  scroll-margin-bottom: calc(64px + (3rem + 1.5rem));
+}
+
+.Page > * {
+  position: relative;
+  z-index: 3;
+}
+
+.Page .PageBgElements {
+  z-index: 2;
+  /* opacity: 0.5; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  /* transform: translateY(-50%); */
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  speak: none;
+}
+
+.PagePreview {
+  min-height: calc(100vh - (64px + (3rem + 1.5rem)));
+}
+
+.PageFooter {
+  min-height: 50vh;
+  scroll-snap-align: end;
+}
+
+.PageSpace {
+  padding-right: 128px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Page {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .PageSpace {
+    padding-right: 64px;
+  }
+}
