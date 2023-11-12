@@ -1,9 +1,10 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
 "use client";
+import AccessibilityBox from "@/components/AccssibilityBox/AccessibilityBox";
 import ColourChip from "@/components/ColourChip/ColourChip";
-import Eighty from "@/components/Eighty/Eighty";
 import Floaty from "@/components/Floaty/Floaty";
+import Footer from "@/components/Footer/Footer";
 import Page from "@/components/Page/Page";
 import ProjectList, { Project } from "@/components/ProjectList/ProjectList";
 import ScrollBackInd from "@/components/ScrollBackInd/ScrollBackInd";
@@ -185,12 +186,11 @@ export default function Home() {
     >
       <ScrollBackInd
         hide={page <= 0}
-        scroll={body.current}
         player={player}
         time={time}
+        scroll={body.current}
       />
       <Page
-        scroll={body.current}
         color={Color3.fromHex("ff4000")}
         bg={`linear-gradient(0deg, #200800ee, #200800ee)${
           player?.recenttracks.track[0].image[2]["#text"] != null
@@ -205,18 +205,7 @@ export default function Home() {
           .LINK
         </h1>
         <Time time={time} date={date} />
-        <Floaty top>
-          <input
-            id="accessibility"
-            type="checkbox"
-            onClick={function (x) {
-              (x.target as HTMLInputElement).checked
-                ? document.body.parentElement?.classList.add("a11y")
-                : document.body.parentElement?.classList.remove("a11y");
-            }}
-          />
-          <label htmlFor="accessibility">Accessibility</label>
-        </Floaty>
+        <AccessibilityBox />
         <Floaty>
           <LastFM player={player} />
         </Floaty>
@@ -224,25 +213,30 @@ export default function Home() {
           <p className="hv">Scroll down for more!</p>
         </Floaty>
       </Page>
-      <Page scroll={body.current} color={Color3.fromHex("FFFFFF")} id="hi">
+      <Page color={Color3.fromHex("FFFFFF")} id="hi">
         <h1>Welcome 👋</h1>
         <p>
-          I'm <b>MeowcaTheoRange</b>{" "}
+          We're <b>MeowcaTheoRange</b>{" "}
           <small aria-label="Pronounced: meow, cuh, the, oh, range">
             (miau-kuh-thee~oh-ray~nj)
           </small>
           .
           <br />
-          I'm a web developer, Fediverse enthusiast, and compulsory Minnesotan.
+          We make up a web developer, Fediverse enthusiast, and compulsory
+          Minnesotan.
         </p>
         <p>
-          I'm also known as <strong>Iszac</strong> or <strong>Theo</strong> as
-          well.
+          We're made up of two identities, Iszac and Theo.
+          <br />
+          This site was originally written by Theo, so it will go on from his
+          perspective.
+          <br />
+          <a href="/iszac">Learn more about us</a>
         </p>
-        <p className="chip">he/they/it</p>
         <p className="chip">Male</p>
         <p className="chip">Minor</p>
         <p className="chip">Autistic</p>
+        <h2>Hey, I'm Theo.</h2>
         <p>I run this domain and all of the services on it.</p>
         <p>
           My favourite hobbies are <strong>programming</strong>,{" "}
@@ -326,7 +320,7 @@ export default function Home() {
           ]}
         />
       </Page>
-      <Page scroll={body.current} color={Color3.fromHex("00c0ff")}>
+      <Page color={Color3.fromHex("00c0ff")}>
         <h1>What's on this domain?</h1>
         <p>
           Here's a quick list of all of the web services on this domain right
@@ -410,12 +404,7 @@ export default function Home() {
           markdown
         />
       </Page>
-      <Page
-        scroll={body.current}
-        color={Color3.fromHex("FF80C0")}
-        id="currents"
-        preview
-      >
+      <Page color={Color3.fromHex("FF80C0")} id="currents" preview>
         <h1>Current Obsessions</h1>
         <p>
           I'm into a lot of stuff. As of this site's publication, you'll
@@ -462,12 +451,7 @@ export default function Home() {
           sections. Enjoy!
         </p>
       </Page>
-      <Page
-        scroll={body.current}
-        color={Color3.fromHex("80FF00")}
-        preview
-        id="sc_programming"
-      >
+      <Page color={Color3.fromHex("80FF00")} preview id="sc_programming">
         <h1>Programming</h1>
         <p>I like using what some call "programming languages".</p>
         <p>
@@ -481,13 +465,7 @@ export default function Home() {
         </p>
         <ProjectList projects={repos} />
       </Page>
-      <Page
-        scroll={body.current}
-        color={Color3.fromHex("80ffff")}
-        preview
-        floaty
-        id="sc_fonts"
-      >
+      <Page color={Color3.fromHex("80ffff")} preview floaty id="sc_fonts">
         <h1>Fonts</h1>
         <p>I also like UI and UI design. This includes fonts, quite a bit.</p>
         <p>
@@ -598,7 +576,7 @@ export default function Home() {
           </div>
         </Floaty>
       </Page>
-      <Page scroll={body.current} color={Color3.fromHex("00c0ff")} id="sc_art">
+      <Page color={Color3.fromHex("00c0ff")} id="sc_art">
         <h1>Artistry</h1>
         <p>
           Artistry usually includes writing and drawing. These are the purposes
@@ -615,11 +593,7 @@ export default function Home() {
         <ProjectList projects={images} markdown />
         <ProjectList projects={blog} markdown double tooLong />
       </Page>
-      <Page
-        scroll={body.current}
-        color={Color3.fromHex("FFFFFF")}
-        id="branding"
-      >
+      <Page color={Color3.fromHex("FFFFFF")} id="branding">
         <h1>Branding</h1>
         <p>
           I don't really have strict branding guidelines, but I do have a few
@@ -648,7 +622,7 @@ export default function Home() {
         <p className="hv">
           If you are a local organization and would like to refer to me by my
           legal name, please{" "}
-          <a href="#top" className="inline">
+          <a href="#hi" className="inline">
             contact me
           </a>{" "}
           and we can probably figure something out.
@@ -662,7 +636,7 @@ export default function Home() {
           these colours:
         </p>
 
-        <ColourChip colour={new Color3(0, 0.75, 1)}>
+        <ColourChip colour={new Color3(0, 0.752941176, 1)}>
           <b>Iszac Blue</b>
           <br />
           <small>Primary</small>
@@ -721,72 +695,8 @@ export default function Home() {
           that I'm still screwing with.
         </p>
       </Page>
-      <Page scroll={body.current} color={Color3.fromHex("000000")}></Page>
-      <Page
-        scroll={body.current}
-        color={Color3.fromHex("ffffff")}
-        footer
-        bg="center/50px 50px repeating-linear-gradient(45deg, #80808010, #80808010 25%, transparent 25%, transparent 50%, #80808010 50%, #80808010 75%, transparent 75%, transparent 100%)"
-        id="footer"
-      >
-        <h1>
-          ABTMTR
-          <wbr />
-          .LINK
-        </h1>
-        <Eighty img="/88x31/dotart.png" alt="blocked by dotart" />
-        <Eighty
-          url="https://www.mozilla.org/en-US/firefox/new/"
-          img="/88x31/firefox4.gif"
-          alt="tested on Firefox"
-        />
-        <Eighty
-          url="https://homestuck.com/"
-          img="/88x31/sun_88x31_dual_border.png"
-          alt="HOMESTUCK"
-        />
-        <Eighty
-          url="https://dimden.dev/"
-          img="https://dimden.dev/services/images/88x31.gif"
-          alt="DIMDEN"
-        />
-        <Eighty
-          url="https://park-city.club/~frix/"
-          img="/88x31/pjfrix2023.png"
-          alt="pjfrix"
-        />
-        <Eighty
-          url="https://invoxiplaygames.uk/"
-          img="/88x31/ipg.png"
-          alt="Invoxi PlayGames"
-        />
-        <Eighty
-          url="https://ioletsgo.gay/"
-          img="/88x31/ivorybutton.gif"
-          alt="ioletsgo.gay"
-        />
-        <Eighty
-          url="https://spacy.neocities.org/"
-          img="/88x31/spacy_webbutton.png"
-          alt="Spacy =)"
-        />
-        <Eighty
-          url="https://disqordia.space/"
-          img="/88x31/disqordia-approved-border.png"
-          alt="Disqordia Approved"
-        />
-        <Eighty
-          url="https://translunar.academy/"
-          img="/88x31/tla.png"
-          alt="TRANSLUNAR ACADEMY"
-        />
-        <Eighty
-          url="https://moth.zone/meowcatheorange"
-          img="/88x31/kkdiagt.png"
-          alt="KARKATDYINGIN AGLUETRAP.COM R.I.P"
-        />
-        <p className="hv">© MeowcaTheoRange 2023</p>
-      </Page>
+      <Page color={Color3.fromHex("000000")}></Page>
+      <Footer />
     </div>
   );
 }

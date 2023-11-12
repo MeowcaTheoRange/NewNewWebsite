@@ -9,7 +9,7 @@ export default function ScrollBackInd<T>({
 }: {
   hide?: boolean;
   scroll: HTMLElement | null;
-  player: { [key: string]: any } | null | undefined;
+  player?: { [key: string]: any } | null | undefined;
   time: string;
 }) {
   return (

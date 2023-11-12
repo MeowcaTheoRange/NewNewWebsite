@@ -1,6 +1,8 @@
 .Sides {
   display: grid;
-  grid-template-columns: auto max-content;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  overflow: hidden;
   gap: 16px;
 }
 

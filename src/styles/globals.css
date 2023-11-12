@@ -213,6 +213,7 @@ a.special:active::after {
   margin-left: 0.25em;
   margin-right: 0.25em;
   border-radius: 1em;
+  vertical-align: 50%;
 }
 
 @media only screen and (max-width: 1024px) {

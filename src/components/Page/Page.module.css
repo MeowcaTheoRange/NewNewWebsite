@@ -37,6 +37,17 @@
   min-height: calc(100vh - (64px + (3rem + 1.5rem)));
 }
 
+.PageHalf {
+  width: 50vw;
+  padding-right: 0;
+}
+
+.PageCut {
+  min-height: 50vh;
+  scroll-snap-align: end;
+  scroll-margin-bottom: 0;
+}
+
 .PageFooter {
   min-height: 50vh;
   scroll-snap-align: end;
@@ -55,5 +66,9 @@
 @media only screen and (max-width: 875px) {
   .PageSpace {
     padding-right: 64px;
+  }
+
+  .PageHalf {
+    width: 100vw;
   }
 }

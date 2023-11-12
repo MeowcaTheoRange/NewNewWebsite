@@ -1,0 +1,16 @@
+.PageContainer {
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  height: max-content;
+  /* overflow-y: auto; */
+  overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  background-attachment: fixed;
+  z-index: 1;
+  scroll-margin-bottom: calc(64px + (3rem + 1.5rem));
+  display: grid;
+  grid-template-columns: auto auto;
+}

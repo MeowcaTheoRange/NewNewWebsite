@@ -5,7 +5,7 @@ export default function SpeedDial({
 }: {
   services: {
     name: string;
-    url: string;
+    url?: string;
     golden?: boolean;
     purpose?: string;
   }[];
@@ -24,9 +24,13 @@ export default function SpeedDial({
           ) : (
             <></>
           )}
-          <a href={service.url} className="special">
-            {service.name}
-          </a>
+          {service.url ? (
+            <a target="_blank" href={service.url} className="special">
+              {service.name}
+            </a>
+          ) : (
+            service.name
+          )}
         </li>
       ))}
     </ul>
