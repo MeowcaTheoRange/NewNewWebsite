@@ -11,9 +11,11 @@ export default function Footer() {
       id="footer"
     >
       <h1>
-        ABTMTR
-        <wbr />
-        .LINK
+        <a href="/" className="special">
+          ABTMTR
+          <wbr />
+          .LINK
+        </a>
       </h1>
       <Eighty img="/88x31/dotart.png" alt="blocked by dotart" />
       <Eighty
