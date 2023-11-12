@@ -1,9 +1,12 @@
 "use client";
+import { useEffect } from "react";
 import Floaty from "../Floaty/Floaty";
 
 export default function AccessibilityBox() {
-  if (window.localStorage.getItem("a11y"))
-    document.body.parentElement?.classList.add("a11y");
+  useEffect(() => {
+    if (window.localStorage.getItem("a11y"))
+      document.body.parentElement?.classList.add("a11y");
+  }, []);
   return (
     <Floaty top>
       <input
