@@ -12,7 +12,7 @@ export default function AccessibilityBox() {
     }
   }, []);
   return (
-    <Floaty top>
+    <Floaty top important>
       <input
         id="accessibility"
         type="checkbox"

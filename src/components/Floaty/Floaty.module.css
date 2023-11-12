@@ -38,6 +38,17 @@
   right: 64px;
 }
 
+.FloatyImportant {
+  display: inline-block;
+  z-index: 8 !important;
+  padding: 16px;
+  background-color: var(--backgroundColor);
+  min-width: 0;
+  max-width: none;
+  border: 1px solid var(--color);
+  /* width: 200px; */
+}
+
 @media only screen and (max-width: 875px) {
   .Floaty {
     position: static !important;
