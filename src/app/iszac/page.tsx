@@ -95,8 +95,8 @@ export default function Home() {
           sure yet.
         </p>
         <p>
-          Iszac is the identity that fills in when Theo feels disconnected from
-          his own identity.
+          Iszac isn't very enthusiastic about fronting at the moment, preferring
+          to take the backseat and front only when things are just right for him.
         </p>
         <p>
           He's more creative, not too interested in sysadmining but more
@@ -113,12 +113,12 @@ export default function Home() {
           <p className="chip">he/him</p>
         </h1>
         <p>
-          We think it would be wrong to call us a <strong>system</strong>,
-          especially because that's not really how we feel.
+          We're currently debating on whether or not we're a <strong>system</strong>,
+          especially because that's what we think is the best explanation to our
+          mental situation at the moment.
         </p>
         <p>
-          We're just one person, 2 identities, that aren't too different from
-          each other. We make up MeowcaTheoRange!
+          We proudly make up MeowcaTheoRange! How MeowcaTheoRange is made up specifically is still under debate.
         </p>
       </Page>
       <Page color={Color3.fromHex("c0c0c0")}>
