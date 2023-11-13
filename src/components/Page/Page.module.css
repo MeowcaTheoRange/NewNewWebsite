@@ -44,7 +44,7 @@
 
 .PageCut {
   min-height: 50vh;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
   scroll-margin-bottom: 0;
 }
 
