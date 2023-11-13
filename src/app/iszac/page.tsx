@@ -113,12 +113,12 @@ export default function Home() {
           <p className="chip">he/him</p>
         </h1>
         <p>
+          We proudly make up MeowcaTheoRange! How MeowcaTheoRange is made up specifically is still under debate.
+        </p>
+        <p>
           We're currently debating on whether or not we're a <strong>system</strong>,
           especially because that's what we think is the best explanation to our
           mental situation at the moment.
-        </p>
-        <p>
-          We proudly make up MeowcaTheoRange! How MeowcaTheoRange is made up specifically is still under debate.
         </p>
       </Page>
       <Page color={Color3.fromHex("c0c0c0")}>
