@@ -10,6 +10,7 @@ export default function Page({
   floaty = false,
   half = false,
   cut = false,
+  scale = false,
   id,
 }: {
   children?: React.ReactNode;
@@ -19,15 +20,16 @@ export default function Page({
   footer?: boolean;
   floaty?: boolean;
   half?: boolean;
+  scale?: boolean;
   cut?: boolean;
   id?: string;
 }) {
   return (
     <div
       id={id}
-      className={`${styles.Page} ${cut ? styles.PageCut : ""} ${
-        half ? styles.PageHalf : ""
-      } ${preview ? styles.PagePreview : ""} ${
+      className={`${styles.Page} ${scale ? styles.PageScale : ""} ${
+        cut ? styles.PageCut : ""
+      } ${half ? styles.PageHalf : ""} ${preview ? styles.PagePreview : ""} ${
         footer ? styles.PageFooter : ""
       } ${floaty ? styles.PageSpace : ""} block PG-collapse-on-a11y`}
       style={
