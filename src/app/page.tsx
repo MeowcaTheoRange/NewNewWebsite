@@ -222,22 +222,23 @@ export default function Home() {
           </small>
           .
           <br />
-          We make up a web developer, Fediverse enthusiast, and compulsory
+          We're a web developer, Fediverse enthusiast, and compulsory
           Minnesotan.
         </p>
-        <p>
+        <p>We run this domain and all of the services on it!</p>
+        {/* <p>
           We're made up of two identities, Iszac and Theo.
           <br />
           This site was originally written by Theo, so it will go on from his
           perspective.
           <br />
           <a href="/iszac">Learn more about us</a>
-        </p>
+        </p> */}
+        {/* ???!?!!?!!!!??!?!!??!?!?!??!?!?!??!!?!??!?!?!???!!!?!?!?!?!?!??!!!?? */}
         <p className="chip">Male</p>
         <p className="chip">Minor</p>
         <p className="chip">Autistic</p>
-        <h2>Hey, I'm Theo.</h2>
-        <p>I run this domain and all of the services on it.</p>
+        {/* <h2>Hey, I'm Theo.</h2> */}
         <p>
           My favourite hobbies are <strong>programming</strong>,{" "}
           <strong>drawing</strong>,{" "}
