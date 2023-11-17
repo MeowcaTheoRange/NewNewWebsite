@@ -335,12 +335,6 @@ export default function Home() {
               url: "https://abtmtr.link/",
             },
             {
-              name: "abs.abtmtr.link",
-              description:
-                "An instance of ABS, a link normalizer for personal use.",
-              url: "https://abs.abtmtr.link/",
-            },
-            {
               name: "blog.abtmtr.link",
               description: "An instance of WriteFreely, used for my blog(s).",
               url: "https://blog.abtmtr.link/",
